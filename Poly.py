@@ -42,6 +42,8 @@ class Polynomial(object):
     def __eq__(self, val):
         if isinstance(val, Polynomial):
             return self.coeffs == val.coeffs
+        elif not (isinstance(val, int) or isinstance(val, float)):
+            raise TypeError("Wrong type!")
         else:
             return len(self.coeffs)==1 and self.coeffs[0]==val
 

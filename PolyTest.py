@@ -129,6 +129,11 @@ class Test_test1(unittest.TestCase):
         self.assertTrue(p == Polynomial([1,4,6]))
         self.assertTrue(p != s)
         self.assertFalse(p == s)
+        s = Polynomial([0,0,0,0,0]) 
+        p = 0
+        self.assertTrue(p == s)
+        p = "a"
+        self.assertRaises(TypeError,s.__eq__,p)
 
     def test_EqualFloat(self):
         p = Polynomial([1.5,4,6.7]) 
