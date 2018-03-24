@@ -1,10 +1,13 @@
 import unittest
 from Polynomial import Polynomial
 class Test_test1(unittest.TestCase):
-    def test_TypeErrorInit(self):
+    def test_TypeError(self):
         self.assertRaises(TypeError, Polynomial,['a','b'])
         self.assertRaises(TypeError, Polynomial,[])
         self.assertRaises(TypeError, Polynomial,['a',54])
+        self.assertRaises(TypeError, Polynomial.__add__,Polynomial([1,2]),"s")
+        self.assertRaises(TypeError, Polynomial.__mul__,Polynomial([1,2]),"s")
+        self.assertRaises(TypeError, Polynomial.__eq__,Polynomial([1,2]),"s")
 
     def test_AddPos(self):
         p = Polynomial([1,4,6,9]) 
