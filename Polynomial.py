@@ -8,7 +8,7 @@ class Polynomial(object):
             for i in range(len(other)):
                 if not (isinstance(other[i], int) or isinstance(other[i], float)):
                     raise TypeError("Wrong type!")
-            self.coeffs = other.copy()
+            self.coeffs = other[:]
             _co = self.coeffs
             if _co:
                 offs = 0
