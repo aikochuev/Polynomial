@@ -90,7 +90,7 @@ class Test_test1(unittest.TestCase):
     def test_MultConst(self):
         p = Polynomial([5, -1, 1]) 
         s = 5
-        self.assertEqual((p*s).coeffs, [25, -5, 5])
+        self.assertEqual((s*p).coeffs, [25, -5, 5])
 
     def test_LeftMultConst(self):
         p = Polynomial([5, -1, 1]) 
