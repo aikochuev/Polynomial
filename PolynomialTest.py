@@ -42,6 +42,11 @@ class Test_test1(unittest.TestCase):
         s = 5
         self.assertListEqual((p+s).coeffs, [-1,0,4,0,-6,14])
 
+    def test_LeftAddIntConst(self):
+        p = Polynomial([0,0,0,-1,0,4,0,-6,9]) 
+        s = 5
+        self.assertListEqual((s+p).coeffs, [-1,0,4,0,-6,14])
+
     def test_AddFloatConst(self):
         p = Polynomial([0,0,0,-1,0,4,0,-6,9]) 
         s = 5.6
@@ -83,6 +88,11 @@ class Test_test1(unittest.TestCase):
         self.assertEqual((p*s).coeffs, [7.5, -6, 5]) 
 
     def test_MultConst(self):
+        p = Polynomial([5, -1, 1]) 
+        s = 5
+        self.assertEqual((p*s).coeffs, [25, -5, 5])
+
+    def test_LeftMultConst(self):
         p = Polynomial([5, -1, 1]) 
         s = 5
         self.assertEqual((p*s).coeffs, [25, -5, 5])

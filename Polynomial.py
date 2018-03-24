@@ -38,7 +38,10 @@ class Polynomial(object):
                 else:
                     res = val
         return Polynomial(res)
-
+    def __radd__(self, other):
+        return self + other
+    def __rmul__(self, other):
+        return self * other
     def __eq__(self, val):
         if isinstance(val, Polynomial):
             return self.coeffs == val.coeffs
