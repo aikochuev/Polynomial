@@ -89,19 +89,19 @@ class Test_test1(unittest.TestCase):
 
     def test_Str(self):
         p = Polynomial([-1,-4,0]) 
-        self.assertEqual(str(p), "-X2-4X")
+        self.assertEqual(str(p), "-x2-4x")
         p = Polynomial([-1,-4,-6]) 
-        self.assertEqual(str(p), "-X2-4X-6")
+        self.assertEqual(str(p), "-x2-4x-6")
         p = Polynomial([0]) 
         self.assertEqual(str(p), "0")
         p = Polynomial([0,0,0]) 
         self.assertEqual(str(p), "0")
         p = Polynomial([1,4,6]) 
-        self.assertEqual(str(p), "X2+4X+6")
+        self.assertEqual(str(p), "x2+4x+6")
         p = Polynomial([1,0,6]) 
-        self.assertEqual(str(p), "X2+6")
+        self.assertEqual(str(p), "x2+6")
         p = Polynomial([-1,4,-6]) 
-        self.assertEqual(str(p), "-X2+4X-6")
+        self.assertEqual(str(p), "-x2+4x-6")
         
     def test_StrFloat(self):
         p = Polynomial([0.0]) 
@@ -109,9 +109,9 @@ class Test_test1(unittest.TestCase):
         p = Polynomial([0.0,0.0,0.0]) 
         self.assertEqual(str(p), "0")
         p = Polynomial([-1.2,4.5,-6.8]) 
-        self.assertEqual(str(p), "-1.2X2+4.5X-6.8")
+        self.assertEqual(str(p), "-1.2x2+4.5x-6.8")
         p = Polynomial([-1.2,0.0,-6.8]) 
-        self.assertEqual(str(p), "-1.2X2-6.8")
+        self.assertEqual(str(p), "-1.2x2-6.8")
 
     def test_EqualInt(self):
         p = Polynomial([1,4,6]) 
